@@ -10,18 +10,14 @@ namespace Mission3Group
         {
             Console.WriteLine("Let's Play Tic-Tac-Toe!");
 
-            //int top[0] = new int[3];
-            //int middle[1] = new int[3];
-            //bottom[]
+            int[] board = new int[9];
+            board[0] = 1;
+            board[1] = 0;
+            board[2] = 1;
+            board[3] = 1;
+            board[4] = 1;
 
 
-
-            int[][] board = new int[3][];
-                new int[3] {1, 1, 1},
-                new int[3] {0, 0, 0 },
-                new int[3] {1, 1, 1}
-            };
-            
             Console.WriteLine(board[0]);
             Console.WriteLine(board[1]);
             Console.WriteLine(board[2]);
