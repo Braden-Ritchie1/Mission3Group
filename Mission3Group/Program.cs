@@ -6,8 +6,10 @@ namespace Mission3Group
     {
         static void Main(string[] args)
         {
+            Driver d = new Driver();
             Console.WriteLine("Hello World!");
-            Console.WriteLine("This is a test!!!");
+
+            d.Board();
         }
     }
 }
