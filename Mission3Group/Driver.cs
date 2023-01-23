@@ -10,17 +10,30 @@ namespace Mission3Group
         {
             Console.WriteLine("Let's Play Tic-Tac-Toe!");
 
-            int[] board = new int[9];
-            board[0] = 1;
-            board[1] = 0;
-            board[2] = 1;
-            board[3] = 1;
-            board[4] = 1;
+            int[] choices = new int[10];
+            for (int i=0; i<10; i++)
+            {
+                choices[i] = i + 1;
+            }
+            
+
+            Console.WriteLine("   |   |   ");
+            Console.WriteLine(" " + choices[0] + " | " + choices[1] + " | " + choices[2] + " ");
+            Console.WriteLine("___|___|___");
+            Console.WriteLine("   |   |   ");
+            Console.WriteLine(" " + choices[3] + " | " + choices[4] + " | " + choices[5] + " ");
+            Console.WriteLine("___|___|___");
+            Console.WriteLine("   |   |   ");
+            Console.WriteLine(" " + choices[6] + " | " + choices[7] + " | " + choices[8] + " ");
+            Console.WriteLine("   |   |   ");
 
 
-            Console.WriteLine(board[0]);
-            Console.WriteLine(board[1]);
-            Console.WriteLine(board[2]);
+            string[] board = new string[9];
+            Console.WriteLine("Player 1, Choose your number: ");
+
+            int player1num = Convert.ToInt32(Console.ReadLine());
+            Console.Write(board[0]);
+
         }
 
     }
