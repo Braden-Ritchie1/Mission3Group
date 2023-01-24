@@ -48,8 +48,8 @@ namespace Mission3Group
 
                     board[player1num - 1] = "X";
 
-                    // send array to support
-                    // Recieve if they won or not
+                    s.ReceiveBoard(board);
+                    s.printBoard();
                 }
 
                 win = "yes";
@@ -62,8 +62,8 @@ namespace Mission3Group
 
                     board[player2num - 1] = "O";
 
-
-                    // Recieve if they won or not
+                    s.ReceiveBoard(board);
+                    s.printBoard();
 
                 }
 
