@@ -7,20 +7,30 @@ namespace Mission3Group
     class Support
     {
         // receive board
-        class Receive
+        private string[] gameBoard;
+        public void ReceiveBoard(string[] newArray)
         {
-            private string[] gameBoard;
-            public void SetArray(string[] newArray)
-            {
-                gameBoard = newArray;
-            }
+            gameBoard = newArray;
+        }
 
-            // print board
-            public void printArray()
+        // print board
+        public void printBoard()
+        {
+            foreach (string xAndO in gameBoard)
             {
-                Console.WriteLine(gameBoard);
+                Console.WriteLine(xAndO);
             }
         }
+
+        public void ()
+        {
+            for (int i = 1; i<10; i++)
+            {
+
+            }
+        }
+        
+    }
 
         // identify results
 
