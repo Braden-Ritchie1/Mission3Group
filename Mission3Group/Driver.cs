@@ -8,14 +8,16 @@ namespace Mission3Group
     {
         public void Board()
         {
-            Console.WriteLine("Let's Play Tic-Tac-Toe!");
+            Support s = new Support();
+
+            Console.WriteLine("Let's Play Tic-Tac-Toe!\n");
 
             int[] choices = new int[10];
             for (int i=0; i<10; i++)
             {
                 choices[i] = i + 1;
             }
-            
+            Console.WriteLine("pick a number to fill in with an X or an O.");
 
             Console.WriteLine("   |   |   ");
             Console.WriteLine(" " + choices[0] + " | " + choices[1] + " | " + choices[2] + " ");
@@ -28,11 +30,52 @@ namespace Mission3Group
             Console.WriteLine("   |   |   ");
 
 
-            string[] board = new string[9];
-            Console.WriteLine("Player 1, Choose your number: ");
+            string[] board = new string[10];
+            for (int j = 0; j < 10; j++)
+            {
+                board[j] = " ";
+            }
 
-            int player1num = Convert.ToInt32(Console.ReadLine());
-            Console.Write(board[0]);
+            string win = "no";
+
+            while (win == "no")
+            {
+                if(win == "no")
+                {
+                    Console.WriteLine("\nPlayer 1, Choose your number: ");
+
+                    int player1num = Convert.ToInt32(Console.ReadLine());
+
+                    board[player1num - 1] = "X";
+
+                    // send array to support
+                    // Recieve if they won or not
+                }
+
+                win = "yes";
+
+                if (win == "no")
+                {
+                    Console.WriteLine("\nPlayer 2, Choose your number: ");
+
+                    int player2num = Convert.ToInt32(Console.ReadLine());
+
+                    board[player2num - 1] = "O";
+
+
+                    // Recieve if they won or not
+
+                }
+
+                win = "yes";
+
+
+                Console.WriteLine("Congrats you won!");
+
+
+
+            }
+
 
         }
 
