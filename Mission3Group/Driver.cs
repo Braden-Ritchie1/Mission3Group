@@ -50,9 +50,14 @@ namespace Mission3Group
 
                     s.ReceiveBoard(board);
                     s.printBoard();
+                    win = s.CheckWin();
+
+                    if (win == "no")
+                    {
+                        Console.WriteLine("Player 1 has won!!!");
+                    }
                 }
 
-                win = "yes";
 
                 if (win == "no")
                 {
@@ -64,14 +69,14 @@ namespace Mission3Group
 
                     s.ReceiveBoard(board);
                     s.printBoard();
+                    win = s.CheckWin();
+
+                    if (win == "no")
+                    {
+                        Console.WriteLine("Player 2 has won!!!");
+                    }
 
                 }
-
-                win = "yes";
-
-
-                Console.WriteLine("Congrats you won!");
-
 
 
             }
