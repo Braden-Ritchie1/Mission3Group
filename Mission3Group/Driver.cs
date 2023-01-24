@@ -30,17 +30,14 @@ namespace Mission3Group
             Console.WriteLine("   |   |   ");
 
 
-            string[] board = new string[10];
-            for (int j = 0; j < 10; j++)
-            {
-                board[j] = " ";
-            }
+            string[] board = new string[9] {"1", "2", "3", "4", "5","6","7","8","9"};
 
-            string win = "no";
 
-            while (win == "no")
+            int win = 0;
+
+            while (win == 0)
             {
-                if(win == "no")
+                if(win == 0)
                 {
                     Console.WriteLine("\nPlayer 1, Choose your number: ");
 
@@ -50,16 +47,21 @@ namespace Mission3Group
 
                     s.ReceiveBoard(board);
                     s.printBoard();
-                    win = s.CheckWin();
+                    win = Support.CheckWin(board);
 
-                    if (win == "no")
+                    if (win == 1)
                     {
                         Console.WriteLine("Player 1 has won!!!");
+                    }
+
+                    if (win == -1)
+                    {
+                        Console.WriteLine("You both tied!!!");
                     }
                 }
 
 
-                if (win == "no")
+                if (win == 0)
                 {
                     Console.WriteLine("\nPlayer 2, Choose your number: ");
 
@@ -69,11 +71,16 @@ namespace Mission3Group
 
                     s.ReceiveBoard(board);
                     s.printBoard();
-                    win = s.CheckWin();
+                    win = Support.CheckWin(board);
 
-                    if (win == "no")
+                    if (win == 1)
                     {
                         Console.WriteLine("Player 2 has won!!!");
+                    }
+
+                    if(win == -1)
+                    {
+                        Console.WriteLine("You both tied!!!");
                     }
 
                 }
