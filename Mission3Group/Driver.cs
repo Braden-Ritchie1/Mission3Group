@@ -17,8 +17,9 @@ namespace Mission3Group
             {
                 choices[i] = i + 1;
             }
-            Console.WriteLine("pick a number to fill in with an X or an O.");
+            Console.WriteLine("Type a number to fill in with an X or an O.");
 
+            //prints practice display board
             Console.WriteLine("   |   |   ");
             Console.WriteLine(" " + choices[0] + " | " + choices[1] + " | " + choices[2] + " ");
             Console.WriteLine("___|___|___");
@@ -35,18 +36,24 @@ namespace Mission3Group
 
             int win = 0;
 
+            //while loop for game. Stays in loop until winner has been selected
             while (win == 0)
             {
+                //Player 1 if statement
                 if(win == 0)
                 {
-                    Console.WriteLine("\nPlayer 1, Choose your number: ");
+                    //gets info from player and assigns it to a specific place on the board
+                    Console.WriteLine("\nPlayer 1, Type your number: ");
 
                     int player1num = Convert.ToInt32(Console.ReadLine());
 
                     board[player1num - 1] = "X";
 
+                    //calls the methods in the support class.
                     s.ReceiveBoard(board);
                     s.printBoard();
+
+                    //reassigns the win variable depending on if there is a winner
                     win = Support.CheckWin(board);
 
                     if (win == 1)
@@ -63,14 +70,18 @@ namespace Mission3Group
 
                 if (win == 0)
                 {
-                    Console.WriteLine("\nPlayer 2, Choose your number: ");
+                    //gets info from player and assigns it to a specific place on the board
+                    Console.WriteLine("\nPlayer 2, Type your number: ");
 
                     int player2num = Convert.ToInt32(Console.ReadLine());
 
                     board[player2num - 1] = "O";
 
+                    //calls the methods in the support class.
                     s.ReceiveBoard(board);
                     s.printBoard();
+
+                    //reassigns the win variable depending on if there is a winner
                     win = Support.CheckWin(board);
 
                     if (win == 1)
